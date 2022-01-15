@@ -20,12 +20,12 @@ class Pegasus {
   // }
 
   sleep = 1;
-  feed = 1;
+  food = 1;
   water = 1;
   play = 1;
   energy = 1;
 
-  level() {
+  _level() {
     console.log("Starting from Level ${this.level}.");
     this.level++;
   }
@@ -55,22 +55,22 @@ class Pony extends Pegasus {
 class Unicorn extends Pegasus {
   constructor(name, yearold, level, skill) {
     super(name, yearold, level);
-    this.ability = skill;
+    this.ability = 5;
   }
 
-  ability = 5;
+  // ability = 5;
 
   sleep() {
     console.log("${this.name} is having a nap. Zzzz");
     this.sleep++;
-    this.feed--;
+    this.food--;
     this.ability++;
   }
 
-  feed() {
+  food() {
     console.log("${this.name} is having a snack, yum!");
     this.sleep--;
-    this.feed++;
+    this.food++;
   }
 
   water() {
@@ -82,23 +82,23 @@ class Unicorn extends Pegasus {
 
 // energy = 20
 
-let pinkiePie = new Pony("Pinkie Pie", 2017, 1, 3);
-let appleJack = new Pony("Apple Jack", 2015, 1, 2);
-let rainbowDash = new Unicorn("Rainbow Dash", 2018, 1);
+let pinkiePie = new Pony("Pinkie Pie", 2015, 1, 3);
+let appleJack = new Pony("Apple Jack", 2016, 1, 2);
+let rainbowDash = new Unicorn("Rainbow Dash", 2017, 1);
 //  let rainbowDash = new Pegasus("")
 
 console.log(rainbowDash);
 console.log(pinkiePie);
 console.log(appleJack);
 
-rainbowDash.sleep();
-rainbowDash.water();
-rainbowDash.feed();
+// rainbowDash.sleep();
+// rainbowDash.water();
+// rainbowDash.food();
 // rainbowDash.play();
 // rainbowDash.energy();
 
 // pinkiePie.sleep();
 // pinkiePie.water();
-pinkiePie.play();
-pinkiePie.energy();
-// pinkiePie.feed();
+// pinkiePie.play();
+// pinkiePie.energy();
+// pinkiePie.food();

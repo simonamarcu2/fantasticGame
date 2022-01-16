@@ -1,3 +1,6 @@
+// class Pegasus contains 2 types of pegasus, Pony and Unicorn
+// the terminal should show name, years old and level
+
 class Pegasus {
   constructor(name, yearold, level) {
     this._name = name;
@@ -5,19 +8,19 @@ class Pegasus {
     this._level = level;
   }
 
-  get name() {
+  get title() {
     return "${this._name} has ${this._yearold} years old.";
   }
 
   get age() {
-    let date = new Date();
+    let date = new date();
     let age = date.getFullYear() - this.yearold;
     return age;
   }
 
-  // get level() {
-  //   return +1;
-  // }
+  get status() {
+    return level + 1;
+  }
 
   sleep = 1;
   food = 1;

@@ -83,6 +83,34 @@ class Unicorn extends Pegasus {
   }
 }
 
+let initQuestions = [
+  {
+    type: "input",
+    name: "name",
+    message: "What is your name?",
+  },
+  {
+    type: "list",
+    name: "type",
+    message: "What kind of Pegasus do you like?",
+    choices: ["Rainbow Dash", "Apple Jack", "Pinkie Pie"],
+  },
+]
+
+let loopQuestion = [
+  {
+    type: "rawlist",
+    name: "action",
+    message: `What do you want to do with your fantastic creature?`,
+    choices: ["Give food", "Sleep", "Play", "Drink water", "Check energy level"],
+  },
+]
+
+module.exports = {
+  initQuestions,
+  loopQuestion,
+}
+
 // energy = 20
 
 let pinkiePie = new Pony("Pinkie Pie", 2015, 1, 3);
